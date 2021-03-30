@@ -1,0 +1,129 @@
+:root {
+  --theme: #41436a;
+  --theme-alt: #676aa2;
+  --accent: #984063;
+  --accent-alt: #562438;
+  --info: #4ea5d9;
+  --info-alt: #154865;
+  --error: #f64668;
+  --error-alt: #880620;
+  --darkest: #101019;
+  --dark: #3d3d40;
+  --neutral: #f6f2ff;
+  --neutral-alt: #c1c1c3;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+a {
+  color: var(--info);
+}
+
+a:visited {
+  color: var(--info-alt);
+}
+
+body {
+  /* layout */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  /* typography & colour */
+  background-color: var(--neutral);
+}
+
+header {
+  /* layout */
+  grid-row: 1 / 2;
+  grid-column: 1 / 6;
+  /* typography & colour */
+  background-color: var(--theme);
+  color: var(--neutral);
+}
+
+nav ul {
+  /* layout */
+  display: flex;
+}
+
+nav li {
+  padding: 1rem;
+  list-style-type: none;
+}
+
+nav ul li:hover {
+  background-color: var(--theme-alt);
+}
+
+article {
+  /* layout */
+  grid-row: 2 / 5;
+  grid-column: 2 / 5;
+  padding: 1rem;
+  margin: 1rem;
+  /* typography & colour */
+  background-color: var(--neutral);
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--accent-alt);
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 2px var(--neutral-alt);
+}
+
+aside.menu-l {
+  /* layout */
+  grid-row: 2 / 5;
+  grid-column: 1 / 2;
+  padding: 1rem;
+  margin: 1rem;
+
+  /* typography & colour */
+  background-color: inherit;
+}
+
+/* .box {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: var(--neutral);
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--accent-alt);
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 2px var(--neutral-alt);
+} */
+
+aside.menu-r {
+  /* layout */
+  grid-row: 2 / 5;
+  grid-column: 1 / 2;
+  /* typography & colour */
+  list-style-type: none;
+}
+
+ul.menu-links {
+  list-style-type: none;
+}
+
+footer {
+  /* layout */
+  grid-row: 5 / 6;
+  grid-column: 1 / 6;
+  /* typography & colour */
+  background-color: var(--theme-alt);
+  color: var(--neutral);
+  font-weight: 200;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    /* layout */
+    display: flex;
+    flex-direction: column;
+  }
+}
