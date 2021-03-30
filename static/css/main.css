@@ -1,3 +1,7 @@
+/* ----------------- */
+/* DEFAULTS */
+/* ----------------- */
+
 :root {
   --theme: #492540;
   --theme-light: #523249;
@@ -45,6 +49,9 @@ body {
   color: var(--dark);
 }
 
+/* ----------------- */
+/* TITLES & VARIANTS */
+/* ----------------- */
 h2 {
   margin-bottom: 1.5rem;
   color: var(--accent);
@@ -56,9 +63,37 @@ h4 {
   color: var(--accent);
 }
 
+.title-theme {
+  color: var(--theme);
+}
+
+.title-neutral {
+  color: var(--neutral);
+}
+
+.title-accent {
+  color: var(--accent);
+}
+
+/* ----------------- */
+/* P VARIANTS */
+/* ----------------- */
+
 p {
   line-height: 3ch;
 }
+
+p.p-accent {
+  color: var(--accent);
+}
+
+p.p-neutral {
+  color: var(--neutral);
+}
+
+/* ----------------- */
+/* SIDEBAR */
+/* ----------------- */
 
 aside#sidebar-left {
   /* layout */
@@ -111,22 +146,47 @@ aside#sidebar-left {
   cursor: pointer;
 }
 
-.icon-sidebar,
-.icon-header {
+.icon-sidebar {
   /* color change calculation */
   filter: var(--filter-neutral);
+}
+
+/* ----------------- */
+/* LANDING PAGE SPECIFIC */
+/* ----------------- */
+
+header {
+  grid-area: navb;
+  /* typography & colour */
+  background-color: var(--accent);
 }
 
 .icon-header {
   padding: 0.5rem;
 }
 
+/* ----------------- */
+/* MAIN & VARIANTS */
+/* ----------------- */
+
 main {
   /* layout */
-
+  grid-area: main;
   /* typography & colour */
   background-color: var(--theme);
 }
+
+main.main-light {
+  background-color: var(--theme-light);
+}
+
+main.main-neutral {
+  background-color: var(--neutral);
+}
+
+/* ----------------- */
+/* BOXES & VARIANTS */
+/* ----------------- */
 
 #content-primary {
   margin-top: 6vh;
@@ -169,15 +229,25 @@ section.boxes-parent {
   margin: calc(5px+1vw);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.box > p {
-  /* TODO: try to get p aligned left without icon */
-}
+/* .box > p { */
+/* TODO: try to get p aligned left without icon */
+/* } */
 
 .box-message > .icon {
   border-radius: 10%;
 }
+
+.box-theme {
+  color: ;
+  background-color: var(--theme-light);
+}
+
+/* ----------------- */
+/* FLASHED MESSAGES */
+/* ----------------- */
 
 .message-info {
   /* typography & colour */
@@ -204,17 +274,19 @@ section.boxes-parent {
   margin-right: 2vw;
 }
 
-.box-message .button-close {
-  /* cursor: pointer; */
-}
+/* .box-message .button-close { */
+/* cursor: pointer; */
+/* } */
+
 .message-info .button-close > img:hover {
   filter: var(--filter-info-dark);
 }
 .message-error .button-close > img:hover {
   filter: var(--filter-accent);
 }
-
-/* Breakpoints */
+/* ------------ */
+/* BREAKPOINTS */
+/* ------------ */
 @media screen and (max-width: 1000px) {
   .label-sidebar {
     display: none;
