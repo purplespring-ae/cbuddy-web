@@ -62,14 +62,22 @@ aside#sidebar-left {
   list-style-type: none;
   padding: 2vh;
   margin: 1rem 0 1rem 0;
-  border-radius: 2vw;
+  border-radius: 18px;
   /* typography & colour */
   background-color: var(--theme);
+}
+
+#sidebar-left li > img {
+  vertical-align: middle;
 }
 
 #sidebar-left li span {
   vertical-align: top;
   padding-left: 0.5rem;
+}
+
+#sidebar-left li:hover {
+  background-color: var(--accent);
 }
 
 .icon-sidebar,
